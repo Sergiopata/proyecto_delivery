@@ -2,7 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-repeat: no-repeat;
+}
+.logo{
+  height: 50px;
+  
+}
+.bg-orange{
+  background-color: #df4204; /*RGB*/
 }
 /* color en los select option*/
 #botellas {
@@ -26,10 +32,10 @@ input {
   background-color: hsl(hue, saturation, lightness);
 }
 
-header {
+/* header {
   width: 100%;
   overflow: hidden;
-  background: rgb(223, 66, 4);
+  background: #df4204;
 }
 header .logo {
   color: #f2f2f2;
@@ -40,36 +46,15 @@ header .logo {
   padding-left: 10px;
 }
 header .logo img {
-  /*tamaño de la img*/
+  
   height: 60%;
-}
+} */
 
-header nav {
-  display: inline-block;
-  line-height: 100px;
-  justify-content: space-between;
-  display: flex;
- justify-content: flex-end;
-}
-nav ul {
-  float: right;
-}
-nav ul li {
-  display: inline-block;
-  padding: 5px 20px;
-  /* list-style: none; */
-}
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  line-height: normal;
-  font-size: 20px;
-}
+
 /*cuando paso el mouse*/
 nav ul li a:hover {
-  background-color: #000;
+  color: #000;
+  
 }
 
 h1 {
@@ -114,19 +99,21 @@ div iframe {
 .productosMain {
   background-image: url(../assets/img/logo.jpg);
   background-size: cover;
-  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.productosImagenes {
+/* .productosImagenes {
   padding-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   justify-content: center;
+} */
 
 
   
-}
+
 .productosImagenes p {
     color: crimson;
     align-content: center;
@@ -148,6 +135,9 @@ div iframe {
 /* estilos CONTACTO */
 .contactoMain {
   background-image: url(../assets/img/logo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 80vh;
   display: flex;
@@ -203,46 +193,37 @@ div iframe {
   font-variant: small-caps;
 }
 
- /* estilos de NOVEDADES */
-.newMain img{
-  width: 250px;
-  padding: auto;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /* display: flex; */
-  display: grid;
-  /* justify-items: center; */
-  align-items: center;
- border-style: solid;
-  border-radius: 25px;
-  color: rgb(223, 110, 17);
+
+
       
-}
+
 .newMain {
   background-image: url(../assets/img/ipa.jpeg);
   background-size: cover;
-    display: grid;
+  background-position: center;
+  background-repeat: no-repeat;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  
-  
+  grid-template-rows: auto; */
 }
 
-
-.newMain input {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.newMain img{
   width: 250px;
-  padding: auto;
+  /* padding: auto; */
   margin: auto;
+  margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  display: flex;
- 
-  justify-content: auto;
   
- 
+  /* display: grid;
+  
+  align-items: center; */
+ border-style: solid;
+  border-radius: 25px;
+  color: rgb(223, 110, 17);
 }
+
+/*  */
 .newMain p {
   color:#000(255, 136, 0);
   text-align: center;
@@ -281,5 +262,3 @@ div iframe {
 
 }
   
-  
-
