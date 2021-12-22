@@ -81,13 +81,25 @@ footer {
   align-items: baseline;
   justify-content: space-around;
   background-color: rgb(233, 101, 14);
-}
-footer a {
-  width: 30px;
-  
   
   
 }
+footer a img{
+  width: 40px;
+  
+}
+.iconos{
+  display: contents;
+  
+  
+}
+footer div p{
+  font-size: 8px; 
+  display: grid;
+  justify-items: center;
+  margin: auto;
+}
+
 
 div iframe {
   width: 700px;
@@ -110,9 +122,6 @@ div iframe {
   grid-template-rows: auto;
   justify-content: center;
 } */
-
-
-  
 
 .productosImagenes p {
     color: crimson;
@@ -206,7 +215,6 @@ div iframe {
     grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto; */
 }
-
 .newMain img{
   width: 250px;
   /* padding: auto; */
@@ -229,17 +237,16 @@ div iframe {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
-  
-
-  
   font-family:Georgia, 'Times New Roman', Times, sans-serif;
 }
+
 /* animacion Delivery Home */
 #tapita {
-  width: 200px;
+  width: 250px;
   height: 200px;
   background-image: url(../assets/img/deliveryman.png);
   background-size: contain;
+  
   /* border-radius: 45px;
   border-color: rgb(233, 101, 14); */
   animation-name: miAnimacion;
@@ -261,4 +268,5 @@ div iframe {
 
 
 }
+
   
