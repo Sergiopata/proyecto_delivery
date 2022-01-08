@@ -1,18 +1,23 @@
 //variables
 $font-general: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 $color-primario:#fff;
+$color-secundario:#df4204;
 
 //Mapas
 $colores: (
-    facebook: grey,
-    wattsap: green,
-    instagram: orange
+    "primario": $color-primario,
+    "secundario": $color-secundario,
+    "facebook": grey,
+    "wattsap": green,
+    "instagram": orange,
 );
+
 @each $valor, $color in $colores {
     .bg--#{$valor} {
         background-color: $color;
     }
     }
+
 //Mixin
 @mixin theme($theme: DarkGray) {
     background: $theme;
@@ -29,7 +34,20 @@ $colores: (
   .success {
     @include theme($theme: DarkGreen);
   }
-  
+
+@mixin gradient {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 31%,
+        rgba(223, 66, 4, 1) 100%,
+        rgba(255, 146, 2, 1) 100%
+    );
+}
+
+.black {
+    color: black;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -39,7 +57,7 @@ $colores: (
     height: 50px;
 }
 .bg-orange {
-    background-color: #df4204; /*RGB*/
+    background-color: map-get($colores,"secundario");
 }
 /* color en los select option*/
 #botellas {
@@ -60,39 +78,14 @@ button {
 }
 
 input {
-    background-color: $color-primario;
+    background-color: map-get($colores, "primario");
 }
-
-/* header {
-    width: 100%;
-    overflow: hidden;
-    background: #df4204;
-  }
-  header .logo {
-    color: #f2f2f2;
-    float: left;
-    font-size: 50px;
-    height: 80px;
-    line-height: 120px;
-    padding-left: 10px;
-  }
-  header .logo img {
-    
-    height: 60%;
-  } */
-
-/*cuando paso el mouse*/
-//   nav ul li a:hover {
-//     color: #000;
-
-//   }
-
 h1,
 h2,
 h3 {
-    color: black;
+    @extend .black;
     display: inline;
-    background-color: $color-primario;
+    background-color: map-get($colores, "primario");
 }
 
 footer {
@@ -115,20 +108,15 @@ footer {
     }
 }
 
-div iframe {
-    width: 700px;
-    height: 440px;
-    margin: 0 120px;
-}
+// div iframe {
+//     width: 700px;
+//     height: 440px;
+//     margin: 0 120px;
+// }
 
 .productosMain {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 31%,
-        rgba(223, 66, 4, 1) 100%,
-        rgba(255, 146, 2, 1) 100%
-    );
+    @include gradient();
+   
     &__imagenes p {
         font-weight: 800;
         color: $color-primario;
@@ -137,31 +125,28 @@ div iframe {
 }
 
 .inicioMain {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 31%,
-        rgba(223, 66, 4, 1) 100%,
-        rgba(255, 146, 2, 1) 100%
-    );
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 31%,
-        rgba(223, 66, 4, 1) 100%,
-        rgba(255, 146, 2, 1) 100%
-    );
+    
+    @include gradient();
     height: 100%;
     background-size: cover;
     position: relative;
+
+    .video{
+        width: 90%;
+        margin: 0 auto;
+
+        iframe {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+
+        }
+
+    }
 }
 /* estilos CONTACTO */
 .contacto {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 31%,
-        rgba(223, 66, 4, 1) 100%,
-        rgba(255, 146, 2, 1) 100%);
+    @include gradient();
     width: 100%;
     height: 80vh;
     display: flex;
@@ -191,7 +176,7 @@ div iframe {
     }
     &__descripcion {
         font-family: $font-general;
-        color: $color-primario;
+        color: map-get($colores, "primario");
         text-align: center;
     }
 }
@@ -212,12 +197,7 @@ div iframe {
 }
 
 .fotosGaleria {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 31%,
-        rgba(223, 66, 4, 1) 100%,
-        rgba(255, 146, 2, 1) 100%);
+    @include gradient();
     display: grid;
 }
 
@@ -237,9 +217,9 @@ div iframe {
     img {
         width: 250px;
         margin: auto;
-        margin-left: 20px;
+        // margin-left: 20px;
         margin-top: 20px;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         border-style: solid;
         border-radius: 25px;
         color: rgb(223, 110, 17);
@@ -252,11 +232,19 @@ div iframe {
         font-family: $font-general;
     }
 }
+.card {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+}
 
 /* animacion Delivery Home */
+
 #tapita {
-    width: 250px;
+    width: 30%;
+    max-width: 250px;
     height: 200px;
+    background-repeat: no-repeat;
     background-image: url(../assets/img/deliveryman.png);
     background-size: contain;
     animation-name: miAnimacion;
@@ -294,3 +282,18 @@ div iframe {
         top: 0px;
     }
 }
+// @media (max-width: 768px){
+//     div iframe {
+//         width: 60%;
+//         height: 30%;
+//         margin: 0 auto;
+//     }
+// }
+// @media (max-width: 550px){
+//     div iframe {
+//         width: 480px;
+//         height: 280px;
+//         margin: 0 auto;
+//     }
+
+// }

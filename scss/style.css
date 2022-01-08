@@ -1,3 +1,11 @@
+.bg--primario {
+  background-color: #fff;
+}
+
+.bg--secundario {
+  background-color: #df4204;
+}
+
 .bg--facebook {
   background-color: grey;
 }
@@ -31,6 +39,12 @@
   color: #fff;
 }
 
+.black, h1,
+h2,
+h3 {
+  color: black;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -44,7 +58,6 @@
 
 .bg-orange {
   background-color: #df4204;
-  /*RGB*/
 }
 
 /* color en los select option*/
@@ -73,28 +86,9 @@ input {
   background-color: #fff;
 }
 
-/* header {
-    width: 100%;
-    overflow: hidden;
-    background: #df4204;
-  }
-  header .logo {
-    color: #f2f2f2;
-    float: left;
-    font-size: 50px;
-    height: 80px;
-    line-height: 120px;
-    padding-left: 10px;
-  }
-  header .logo img {
-    
-    height: 60%;
-  } */
-/*cuando paso el mouse*/
 h1,
 h2,
 h3 {
-  color: black;
   display: inline;
   background-color: #fff;
 }
@@ -127,14 +121,7 @@ footer .iconos {
   display: contents;
 }
 
-div iframe {
-  width: 700px;
-  height: 440px;
-  margin: 0 120px;
-}
-
 .productosMain {
-  background: black;
   background: -webkit-gradient(linear, left top, right top, color-stop(31%, black), color-stop(100%, #df4204), to(#ff9202));
   background: linear-gradient(90deg, black 31%, #df4204 100%, #ff9202 100%);
 }
@@ -147,18 +134,26 @@ div iframe {
 }
 
 .inicioMain {
-  background: black;
   background: -webkit-gradient(linear, left top, right top, color-stop(31%, black), color-stop(100%, #df4204), to(#ff9202));
-  background: linear-gradient(90deg, black 31%, #df4204 100%, #ff9202 100%);
   background: linear-gradient(90deg, black 31%, #df4204 100%, #ff9202 100%);
   height: 100%;
   background-size: cover;
   position: relative;
 }
 
+.inicioMain .video {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.inicioMain .video iframe {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
 /* estilos CONTACTO */
 .contacto {
-  background: black;
   background: -webkit-gradient(linear, left top, right top, color-stop(31%, black), color-stop(100%, #df4204), to(#ff9202));
   background: linear-gradient(90deg, black 31%, #df4204 100%, #ff9202 100%);
   width: 100%;
@@ -219,7 +214,6 @@ div iframe {
 }
 
 .fotosGaleria {
-  background: black;
   background: -webkit-gradient(linear, left top, right top, color-stop(31%, black), color-stop(100%, #df4204), to(#ff9202));
   background: linear-gradient(90deg, black 31%, #df4204 100%, #ff9202 100%);
   display: -ms-grid;
@@ -244,9 +238,7 @@ div iframe {
 .newMain img {
   width: 250px;
   margin: auto;
-  margin-left: 20px;
   margin-top: 20px;
-  margin-bottom: 20px;
   border-style: solid;
   border-radius: 25px;
   color: #df6e11;
@@ -260,10 +252,18 @@ div iframe {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
+.card {
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 /* animacion Delivery Home */
 #tapita {
-  width: 250px;
+  width: 30%;
+  max-width: 250px;
   height: 200px;
+  background-repeat: no-repeat;
   background-image: url(../assets/img/deliveryman.png);
   background-size: contain;
   -webkit-animation-name: miAnimacion;
