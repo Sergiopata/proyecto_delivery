@@ -1,7 +1,10 @@
 //variables
 $font-general: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+// $color-primario: rgba(255, 255, 255, 0.678);
 $color-primario: #fff;
 $color-secundario: #df4204;
+
+
 
 //Mapas
 $colores: (
@@ -44,8 +47,8 @@ $colores: (
     );
 }
 
-.black {
-    color: black;
+.white {
+    color: white;
 }
 
 * {
@@ -83,9 +86,10 @@ input {
 h1,
 h2,
 h3 {
-    @extend .black;
+    @extend .white;
     display: inline;
-    background-color: map-get($colores, "primario");
+    
+    
 }
 
 footer {
@@ -155,17 +159,16 @@ footer {
         margin-bottom: 30px;
         max-width: 300px;
     }
-    &__Formulario {
-        h5 {
-            margin-bottom: 10px;
-            color: $color-primario;
+    &__formText {
+        margin-bottom: 10px;
+        color: $color-primario;
         }
-
-        input {
-            margin-bottom: 20px;
+    input {
+        margin-bottom: 30px;
         }
+        
     }
-}
+
 
 /* estilos FOTOS  */
 
@@ -207,6 +210,7 @@ footer {
         text-align: center;
         margin: 0 auto;
         max-width: 300px;
+        justify-content: center;
     }
 }
 
@@ -219,10 +223,9 @@ footer {
 }
 
 .newMain {
-    background-image: url(../assets/img/ipa.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include gradient();
+    display: grid;
+
     &__titulo {
         text-align: center;
         margin: 0 auto;
