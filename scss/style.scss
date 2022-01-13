@@ -4,8 +4,6 @@ $font-general: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 $color-primario: #fff;
 $color-secundario: #df4204;
 
-
-
 //Mapas
 $colores: (
     "primario": $color-primario,
@@ -88,7 +86,6 @@ h2,
 h3 {
     @extend .white;
     display: inline;
-    
 }
 //Footers-logos-parrafos footer
 footer {
@@ -119,12 +116,23 @@ footer {
         align-content: center;
     }
 }
+//img carousel
+.carousel-inner {
+    .carousel-item {
+        img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+    }
+}
 //home
 .inicioMain {
     @include gradient();
     height: 100%;
     background-size: cover;
     position: relative;
+    overflow-x: hidden;
 
     .video {
         width: 90%;
@@ -155,23 +163,28 @@ footer {
     &__formText {
         margin-bottom: 10px;
         color: $color-primario;
-        }
+    }
     input {
         margin-bottom: 30px;
-        }
-        
     }
-
+}
 
 /* estilos FOTOS  */
 
 .latas {
     margin-bottom: 20px;
-    &__imagenes img {
-        width: 300px;
-        border-radius: 25px;
-        margin: 10px;
-        padding: 15px;
+    &__imagenes {
+        @media (min-width: 1025px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 25px;
+            margin: 10px;
+            padding: 15px;
+        }
     }
     &__descripcion {
         font-family: $font-general;
@@ -182,12 +195,19 @@ footer {
 
 .latas2 {
     margin-bottom: 20px;
-    &__imagenes img {
-        width: 300px;
-        border-radius: 25px;
-        margin: 10px;
-        padding: 15px;
+    &__imagenes {
+        @media (min-width: 1025px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+        img {
+            width: 300px;
+            border-radius: 25px;
+            margin: 10px;
+            padding: 15px;
+        }
     }
+
     &__descripcion {
         font-family: $font-general;
         color: $color-primario;
@@ -197,7 +217,10 @@ footer {
 //fotos
 .fotosGaleria {
     @include gradient();
+    width: 100%;
     display: grid;
+    // grid-template-columns: 3, 1fr;
+    overflow-x: hidden;
 
     &__fotos {
         text-align: center;
@@ -205,7 +228,6 @@ footer {
         max-width: 300px;
         justify-content: center;
     }
-    
 }
 
 /* titulo de index */
@@ -249,7 +271,9 @@ footer {
     max-width: 320px;
     margin: 0 auto;
 }
-
+.section_animation {
+    max-width: 100%;
+}
 /* animacion Delivery Home */
 
 #tapita {
@@ -260,8 +284,8 @@ footer {
     background-image: url(../assets/img/deliveryman.png);
     background-size: contain;
     animation-name: miAnimacion;
-    animation-duration: 4s;
-    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-delay: 1s;
     position: relative;
     animation-direction: inherit;
     animation-timing-function: ease;
@@ -292,5 +316,35 @@ footer {
         background-image: url(../assets/img/deliveryman.png);
         left: 0px;
         top: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    @keyframes miAnimacion {
+        0% {
+            background-image: url(../assets/img/deliveryman.png);
+            left: 0;
+            top: 0px;
+        }
+        25% {
+            background-image: url(../assets/img/deliveryman.png);
+            left: 0px;
+            top: 0px;
+        }
+        50% {
+            background-image: url(../assets/img/deliveryman.png);
+            left: 0px;
+            top: 0px;
+        }
+        75% {
+            background-image: url(../assets/img/deliveryman.png);
+            left: 180px;
+            top: 0px;
+        }
+        100% {
+            background-image: url(../assets/img/deliveryman.png);
+            left: 0px;
+            top: 0px;
+        }
     }
 }
