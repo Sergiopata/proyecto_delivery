@@ -89,9 +89,8 @@ h3 {
     @extend .white;
     display: inline;
     
-    
 }
-
+//Footers-logos-parrafos footer
 footer {
     display: flex;
     align-items: baseline;
@@ -110,13 +109,7 @@ footer {
         display: contents;
     }
 }
-
-// div iframe {
-//     width: 700px;
-//     height: 440px;
-//     margin: 0 120px;
-// }
-
+//productos
 .productosMain {
     @include gradient();
 
@@ -126,7 +119,7 @@ footer {
         align-content: center;
     }
 }
-
+//home
 .inicioMain {
     @include gradient();
     height: 100%;
@@ -201,7 +194,7 @@ footer {
         text-align: center;
     }
 }
-
+//fotos
 .fotosGaleria {
     @include gradient();
     display: grid;
@@ -222,7 +215,7 @@ footer {
     display: block;
     font-variant: small-caps;
 }
-
+//Novedades
 .newMain {
     @include gradient();
     display: grid;
@@ -301,18 +294,3 @@ footer {
         top: 0px;
     }
 }
-// @media (max-width: 768px){
-//     div iframe {
-//         width: 60%;
-//         height: 30%;
-//         margin: 0 auto;
-//     }
-// }
-// @media (max-width: 550px){
-//     div iframe {
-//         width: 480px;
-//         height: 280px;
-//         margin: 0 auto;
-//     }
-
-// }
